@@ -1,0 +1,92 @@
+<div class="container">
+  <span>Alta de escuelas</span>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Agrupación</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.agrupacion" name="agrupacion" placeholder="Agrupación">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Nombre Corto</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.corto" name="corto" placeholder="Nombre Corto">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Profesor</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.profesor" name="profesor" placeholder="Profesor">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Contacto</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.contacto" name="contacto" placeholder="Contacto">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Dirección</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.direccion" name="direccion" placeholder="Dirección">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Teléfono</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.telefono" name="telefono" placeholder="Teléfono">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Whatsapp</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.whatsapp" name="whatsapp" placeholder="Whatsapp">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Correo electrónico</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.mail" name="mail" placeholder="Correo electrónico">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Facebook</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" [(ngModel)]="newSchool.facebook" name="facebook" placeholder="Facebook">
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <input type="submit" value="Registrar">
+    </div>
+  </form>
+</div>
+

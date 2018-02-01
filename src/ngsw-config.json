@@ -6,7 +6,8 @@
     "resources": {
       "files": [
         "/favicon.ico",
-        "/index.html"
+        "/index.html",
+        "/manifest.json"
       ],
       "versionedFiles": [
         "/*.bundle.css",
@@ -22,6 +23,29 @@
       "files": [
         "/assets/**"
       ]
+    }
+  }],
+  "dataGroups": [{
+    "name": "api-freshness",
+    "urls": [
+      "/new"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1h",
+      "timeout": "10s",
+      "strategy": "freshness"
+    }
+  }, {
+    "name": "api-performance",
+    "urls": [
+      "/",
+      "/home"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1d",
+      "strategy": "performance"
     }
   }]
 }

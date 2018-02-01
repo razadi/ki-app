@@ -1,0 +1,47 @@
+<section class="wrapper">
+  <div>
+    <button (click)="crearSchool($event, schools)">Registrar su escuela</button>
+    <button [routerLink]="['/home']">Regresar</button>
+  </div>
+
+  <div *ngIf="newState">
+    <app-add-escuela></app-add-escuela>
+  </div>
+
+  <!-- <div *ngIf="!newState"> ; else noSchools -->
+    <div *ngIf="schools?.length > 0" >
+      <div *ngFor="let school of schools" class="container">
+        <img src="./assets/img/school.jpg" alt="{{school.agrupacion}}" style="width:90px">
+        <p><span>{{school.agrupacion}}</span> Prof. {{school.profesor}}</p>
+        <p>Prof. {{school.direccion}}</p>
+
+        <a href="#" class="secondary-content">
+          <i (click)="deleteSchool($event, school)" class="fa fa-trash"></i>
+          <i (click)="editSchool($event, school)" class="fa fa-pencil"></i>
+        </a>
+
+        <div *ngIf="editState && schoolToEdit.id === school.id">
+          <form (ngSubmit)="updateSchool(school)">
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  type="text" name="agrupacion"
+                  placeholder="Edit Title" [(ngModel)]="school.agrupacion">
+              </div>
+              <div class="input-field col s6">
+                  <input
+                    type="text" name="profesor"
+                    placeholder="Edit Description" [(ngModel)]="school.profesor">
+              </div>
+              <input type="submit" class="btn" value="Modificar datos">
+              <button class="btn red" (click)="deleteSchool($event, school)">Eliminar Escuela</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <!-- <ng-template #noSchools><h4>No hay escuales a mostrar</h4></ng-template> -->
+    </div>
+  <!-- </div> -->
+
+</section>

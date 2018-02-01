@@ -1,0 +1,36 @@
+<header>
+  <div class="logo">
+    <a href=""><img src="../../assets/img/logo.png" title="ki-app" alt="ki-app"/></a>
+  </div>
+  <div class="logoc">
+    <a href=""><img src="../../assets/img/logoc.png" title="ki-app" alt="ki-app"/></a>
+  </div>
+
+  <div id="menu_icon"></div>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/home']" routerLinkActive="selected" >Inicio</a></li>
+      <li><a [routerLink]="['/kiapp']" routerLinkActive="selected" >ki-app</a></li>
+      <li><a [routerLink]="['/registro']" routerLinkActive="selected" >Registro</a></li>
+      <li><a [routerLink]="['/login']" routerLinkActive="selected" >Login</a></li>
+      <li><a [routerLink]="['/contacto']" routerLinkActive="selected" >Contactanos</a></li>
+    </ul>
+  </nav>
+
+  <div class="footer clearfix">
+    <ul class="social clearfix">
+      <li><a href="{{ _is.info.facebook }}" class="fb" data-title="Facebook"></a></li>
+      <li><a href="{{ _is.info.google }}" class="google" data-title="Google +"></a></li>
+      <li><a href="{{ _is.info.instagram }}" class="behance" data-title="Behance"></a></li>
+      <li><a href="{{ _is.info.twitter }}" class="twitter" data-title="Twitter"></a></li>
+      <!--<li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+      <!-- <li><a href="#" class="rss" data-title="RSS"></a></li> -->
+    </ul><!-- end social -->
+
+    <div class="rights">
+      <p>Copyright © {{anio}} {{ _is.info.titulo }}</p>
+      <p>Poweres by <a href="{{ _is.info.web }}">{{ _is.info.name }}</a></p>
+    </div><!-- end rights -->
+  </div ><!-- end footer -->
+
+</header>
